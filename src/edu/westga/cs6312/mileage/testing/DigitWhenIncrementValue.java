@@ -51,5 +51,20 @@ class DigitWhenIncrementValue {
 		int value = theDigit.getValue();
 		assertEquals(0, value);
 	}
+	
+	/**
+	 * This method will confirm that incrementing Digit 14 times
+	 * will produce a current value of 4
+	 */
+	@Test
+	public void testIncrement14TimesShouldGiveValue4() {
+		Digit theDigit = new Digit();
+		for (int count = 0; count < 14; count++) {
+			theDigit.increment();
+		}
+		
+		int value = theDigit.getValue();
+		assertEquals(4, value);
+	}
 
 }
