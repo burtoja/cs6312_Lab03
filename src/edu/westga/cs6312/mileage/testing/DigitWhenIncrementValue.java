@@ -6,6 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import edu.westga.cs6312.mileage.model.Digit;
 
+/**
+ * This class will test the increment method in the Digit class
+ * 
+ * @author J. Allen Burton
+ * @version Jan 18, 2020
+ *
+ */
 class DigitWhenIncrementValue {
 
 	/**

@@ -32,7 +32,7 @@ public class Digit {
 	
 	/**
 	 * This method will advance the digit by one position.  Note that
-	 * if the digit is currently 9, then the digit rolls over to zero.
+	 * if the digit is currently MAX_VALUE, then the digit rolls over to zero.
 	 * 
 	 * @precondition	none
 	 */
@@ -41,6 +41,21 @@ public class Digit {
 			this.currentValue = 0;
 		} else {
 			this.currentValue++;
+		}
+	}
+	
+	/**
+	 * This method will roll the digit back by one position.  Note
+	 * that if the digit is currently 0, then the digit rolls back to 
+	 * the MAX_VALUE
+	 * 
+	 * @precondition	none
+	 */
+	public void decrement() {
+		if (this.currentValue == 0) {
+			this.currentValue = MAX_VALUE;
+		} else {
+			this.currentValue--;
 		}
 	}
 }
