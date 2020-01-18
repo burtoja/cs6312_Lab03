@@ -29,4 +29,18 @@ public class Digit {
 	public int getValue() {
 		return this.currentValue;
 	}
+	
+	/**
+	 * This method will advance the digit by one position.  Note that
+	 * if the digit is currently 9, then the digit rolls over to zero.
+	 * 
+	 * @precondition	none
+	 */
+	public void increment() {
+		if (this.currentValue == MAX_VALUE) {
+			this.currentValue = 0;
+		} else {
+			this.currentValue++;
+		}
+	}
 }
