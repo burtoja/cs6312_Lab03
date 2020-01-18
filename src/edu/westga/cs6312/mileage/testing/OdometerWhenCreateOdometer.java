@@ -17,7 +17,7 @@ public class OdometerWhenCreateOdometer {
 
 	/**
 	 * Test to be sure that the Odometer's 0-parameter constructor will
-	 * correctly create an odometer showing 000.0
+	 * correctly create an Odometer showing 000.0
 	 */
 	@Test
 	public void test0ParameterConstructorShoulHaveMileage0000() {
@@ -25,5 +25,40 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 000.0", value);
 	}
-
+	
+	/**
+	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
+	 * as parameters
+	 */
+	@Test
+	public void test4ParameterConstructorShouldHaveMileage4893() {
+		Odometer theOdometer = new Odometer(4, 8, 9, 3);
+		String value = theOdometer.toString();
+		assertEquals("Odometer with mileage 489.3", value);
+	}
+	
+	/**
+	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
+	 * as parameters
+	 */
+	@Test
+	public void test4ParameterConstructorMinimumShouldHaveMileage0000() {
+		Odometer theOdometer = new Odometer(0, 0, 0, 0);
+		String value = theOdometer.toString();
+		assertEquals("Odometer with mileage 000.0", value);
+	}
+	
+	/**
+	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
+	 * as parameters
+	 */
+	@Test
+	public void test4ParameterConstructorMaximumShouldHaveMileage9999() {
+		Odometer theOdometer = new Odometer(9, 9, 9, 9);
+		String value = theOdometer.toString();
+		assertEquals("Odometer with mileage 999.9", value);
+	}
 }
