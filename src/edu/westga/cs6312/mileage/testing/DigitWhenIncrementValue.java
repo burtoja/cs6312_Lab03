@@ -16,8 +16,8 @@ import edu.westga.cs6312.mileage.model.Digit;
 class DigitWhenIncrementValue {
 
 	/**
-	 * This method will confirm that incrementing a new Digit will
-	 * produce a current value of 1
+	 * This method will confirm that incrementing a new Digit will produce a current
+	 * value of 1
 	 */
 	@Test
 	void testIncrementNewDigitShouldGiveValue1() {
@@ -26,10 +26,10 @@ class DigitWhenIncrementValue {
 		int value = theDigit.getValue();
 		assertEquals(1, value);
 	}
-	
+
 	/**
-	 * This method will confirm that incrementing Digit from 5
-	 * will produce a current value of 6 
+	 * This method will confirm that incrementing Digit from 5 will produce a
+	 * current value of 6
 	 */
 	@Test
 	public void testIncrementDigit5ShouldGiveValue6() {
@@ -37,15 +37,15 @@ class DigitWhenIncrementValue {
 		for (int count = 0; count < 5; count++) {
 			theDigit.increment();
 		}
-		
+
 		theDigit.increment();
 		int value = theDigit.getValue();
 		assertEquals(6, value);
 	}
-	
+
 	/**
-	 * This method will confirm that incrementing Digit from 9
-	 * will produce a current value of 0
+	 * This method will confirm that incrementing Digit from 9 will produce a
+	 * current value of 0
 	 */
 	@Test
 	public void testIncrementDigit9ShouldGiveValue0() {
@@ -53,15 +53,15 @@ class DigitWhenIncrementValue {
 		for (int count = 0; count < 9; count++) {
 			theDigit.increment();
 		}
-		
+
 		theDigit.increment();
 		int value = theDigit.getValue();
 		assertEquals(0, value);
 	}
-	
+
 	/**
-	 * This method will confirm that incrementing Digit 14 times
-	 * will produce a current value of 4
+	 * This method will confirm that incrementing Digit 14 times will produce a
+	 * current value of 4
 	 */
 	@Test
 	public void testIncrement14TimesShouldGiveValue4() {
@@ -69,7 +69,7 @@ class DigitWhenIncrementValue {
 		for (int count = 0; count < 14; count++) {
 			theDigit.increment();
 		}
-		
+
 		int value = theDigit.getValue();
 		assertEquals(4, value);
 	}

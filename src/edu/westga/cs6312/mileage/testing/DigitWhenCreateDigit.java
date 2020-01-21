@@ -16,9 +16,9 @@ import edu.westga.cs6312.mileage.model.Digit;
 public class DigitWhenCreateDigit {
 
 	/**
-	 * Test to verify that getValue returns correct value of Digit
-	 * When object is created the value should be zero so that
-	 * should be the return value when called here.
+	 * Test to verify that getValue returns correct value of Digit When object is
+	 * created the value should be zero so that should be the return value when
+	 * called here.
 	 */
 	@Test
 	public void test() {

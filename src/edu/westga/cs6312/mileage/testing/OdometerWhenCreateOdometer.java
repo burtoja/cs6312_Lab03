@@ -16,8 +16,8 @@ import edu.westga.cs6312.mileage.model.Odometer;
 public class OdometerWhenCreateOdometer {
 
 	/**
-	 * Test to be sure that the Odometer's 0-parameter constructor will
-	 * correctly create an Odometer showing 000.0
+	 * Test to be sure that the Odometer's 0-parameter constructor will correctly
+	 * create an Odometer showing 000.0
 	 */
 	@Test
 	public void test0ParameterConstructorShoulHaveMileage0000() {
@@ -25,11 +25,10 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 000.0", value);
 	}
-	
+
 	/**
-	 * Test to be sure that the Odometer's 4 parameter constructor will
-	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
-	 * as parameters
+	 * Test to be sure that the Odometer's 4 parameter constructor will correctly
+	 * create an Odometer showing 489.3 when given the 4, 8, 9, 3 as parameters
 	 */
 	@Test
 	public void test4ParameterConstructorMinimumShouldHaveMileage0000() {
@@ -37,11 +36,10 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 000.0", value);
 	}
-	
+
 	/**
-	 * Test to be sure that the Odometer's 4 parameter constructor will
-	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
-	 * as parameters
+	 * Test to be sure that the Odometer's 4 parameter constructor will correctly
+	 * create an Odometer showing 489.3 when given the 4, 8, 9, 3 as parameters
 	 */
 	@Test
 	public void test4ParameterConstructorMaximumShouldHaveMileage9999() {
@@ -49,11 +47,10 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 999.9", value);
 	}
-	
+
 	/**
-	 * Test to be sure that the Odometer's 4 parameter constructor will
-	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
-	 * as parameters
+	 * Test to be sure that the Odometer's 4 parameter constructor will correctly
+	 * create an Odometer showing 489.3 when given the 4, 8, 9, 3 as parameters
 	 */
 	@Test
 	public void test4ParameterConstructorShouldHaveMileage4893() {
@@ -61,10 +58,10 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 489.3", value);
 	}
-	
+
 	/**
 	 * Test to be sure that the Odometer's 4 parameter constructor precondition
-	 * check works.  Delivering negative number as parameter as first parameter 
+	 * check works. Delivering negative number as parameter as first parameter
 	 * should default the entire odometer to zero (000.0)
 	 */
 	@Test
@@ -73,11 +70,11 @@ public class OdometerWhenCreateOdometer {
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 000.0", value);
 	}
-	
+
 	/**
 	 * Test to be sure that the Odometer's 4 parameter constructor precondition
-	 * check works.  Delivering a number > 9 as parameter as first parameter 
-	 * should default the entire odometer to zero (000.0)
+	 * check works. Delivering a number > 9 as parameter as first parameter should
+	 * default the entire odometer to zero (000.0)
 	 */
 	@Test
 	public void test4ParameterConstructorWith12In100sPlaceShouldHaveMileage0000() {
