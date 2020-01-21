@@ -1,6 +1,6 @@
 package edu.westga.cs6312.mileage.testing;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -27,7 +27,7 @@ public class OdometerWhenCreateOdometer {
 	}
 	
 	/**
-	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * Test to be sure that the Odometer's 4 parameter constructor will
 	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
 	 * as parameters
 	 */
@@ -39,7 +39,7 @@ public class OdometerWhenCreateOdometer {
 	}
 	
 	/**
-	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * Test to be sure that the Odometer's 4 parameter constructor will
 	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
 	 * as parameters
 	 */
@@ -51,7 +51,7 @@ public class OdometerWhenCreateOdometer {
 	}
 	
 	/**
-	 * Test to be sure that the Odometer's 4 paramet constructor will
+	 * Test to be sure that the Odometer's 4 parameter constructor will
 	 * correctly create an Odometer showing 489.3 when given the 4, 8, 9, 3 
 	 * as parameters
 	 */
@@ -60,5 +60,17 @@ public class OdometerWhenCreateOdometer {
 		Odometer theOdometer = new Odometer(9, 9, 9, 9);
 		String value = theOdometer.toString();
 		assertEquals("Odometer with mileage 999.9", value);
+	}
+	
+	/**
+	 * Test to be sure that the Odometer's 4 parameter constructor precondition
+	 * check works.  Delivering negative number as parameter as first parameter 
+	 * should default that digit to zero (099.0)
+	 */
+	@Test
+	public void test4ParameterConstructorWithNeg1ShouldHaveMileage0000() {
+		Odometer theOdometer = new Odometer(-1, 9, 9, 9);
+		String value = theOdometer.toString();
+		assertEquals("Odometer with mileage 000.0", value);
 	}
 }

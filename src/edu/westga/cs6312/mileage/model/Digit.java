@@ -1,4 +1,5 @@
 package edu.westga.cs6312.mileage.model;
+
 /**
  * This class will model a single digit in an odometer.
  * 
@@ -8,33 +9,33 @@ package edu.westga.cs6312.mileage.model;
  */
 
 public class Digit {
+	private static final int MAX_VALUE = 9;
 	private int currentValue;
-	static final int MAX_VALUE = 9;
 
 	/**
 	 * Class constructor which initializes digit to zero
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 */
 	public Digit() {
 		this.currentValue = 0;
 	}
-	
+
 	/**
 	 * This method gets the current value of the digit
 	 * 
-	 * @return	current value of the digit
-	 * @precondition	none
+	 * @return current value of the digit
+	 * @precondition none
 	 */
 	public int getValue() {
 		return this.currentValue;
 	}
-	
+
 	/**
-	 * This method will advance the digit by one position.  Note that
-	 * if the digit is currently MAX_VALUE, then the digit rolls over to zero.
+	 * This method will advance the digit by one position. Note that if the digit is
+	 * currently MAX_VALUE, then the digit rolls over to zero.
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 */
 	public void increment() {
 		if (this.currentValue == MAX_VALUE) {
@@ -43,13 +44,12 @@ public class Digit {
 			this.currentValue++;
 		}
 	}
-	
+
 	/**
-	 * This method will roll the digit back by one position.  Note
-	 * that if the digit is currently 0, then the digit rolls back to 
-	 * the MAX_VALUE
+	 * This method will roll the digit back by one position. Note that if the digit
+	 * is currently 0, then the digit rolls back to the MAX_VALUE
 	 * 
-	 * @precondition	none
+	 * @precondition none
 	 */
 	public void decrement() {
 		if (this.currentValue == 0) {
